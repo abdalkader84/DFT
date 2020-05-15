@@ -1,0 +1,130 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 699
+  ClientWidth = 889
+  Position = DesktopCenter
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  DesignerMasterStyle = 0
+  object Panel1: TPanel
+    Align = Top
+    Size.Width = 889.000000000000000000
+    Size.Height = 20.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object Button1: TButton
+      Align = Left
+      Position.X = 80.000000000000000000
+      Size.Width = 80.000000000000000000
+      Size.Height = 20.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      Text = 'DFT'
+      OnClick = Button1Click
+    end
+    object Button2: TButton
+      Align = Left
+      Position.X = 160.000000000000000000
+      Size.Width = 80.000000000000000000
+      Size.Height = 20.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 2
+      Text = 'Clear'
+      OnClick = Button2Click
+    end
+    object Button3: TButton
+      Align = Left
+      Size.Width = 80.000000000000000000
+      Size.Height = 20.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 3
+      Text = 'load image'
+      OnClick = Button3Click
+    end
+    object CheckBox1: TCheckBox
+      Align = Left
+      IsChecked = True
+      Position.X = 240.000000000000000000
+      Size.Width = 120.000000000000000000
+      Size.Height = 20.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 4
+      Text = 'show/hide'
+      OnChange = CheckBox1Change
+    end
+    object TrackBar1: TTrackBar
+      Align = Left
+      CanParentFocus = True
+      Max = 500.000000000000000000
+      Min = 10.000000000000000000
+      Orientation = Horizontal
+      Position.X = 360.000000000000000000
+      Size.Width = 100.000000000000000000
+      Size.Height = 19.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 5
+      Value = 500.000000000000000000
+      OnChange = TrackBar1Change
+    end
+    object Label1: TLabel
+      Align = Left
+      Position.X = 460.000000000000000000
+      Size.Width = 120.000000000000000000
+      Size.Height = 20.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'speed'
+      TabOrder = 6
+    end
+  end
+  object Layout1: TLayout
+    Align = Client
+    HitTest = True
+    Size.Width = 889.000000000000000000
+    Size.Height = 659.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    OnPainting = Layout1Painting
+    OnMouseMove = Layout1MouseMove
+    OnMouseUp = Layout1MouseUp
+    object Image1: TImage
+      MultiResBitmap = <
+        item
+        end>
+      Align = Client
+      HitTest = False
+      Opacity = 0.500000000000000000
+      Size.Width = 889.000000000000000000
+      Size.Height = 659.000000000000000000
+      Size.PlatformDefault = False
+    end
+  end
+  object Panel2: TPanel
+    Align = Bottom
+    Position.Y = 679.000000000000000000
+    Size.Width = 889.000000000000000000
+    Size.Height = 20.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 2
+    object Text1: TText
+      Align = Client
+      Size.Width = 889.000000000000000000
+      Size.Height = 20.000000000000000000
+      Size.PlatformDefault = False
+    end
+  end
+  object Timer1: TTimer
+    Enabled = False
+    Interval = 100
+    OnTimer = Timer1Timer
+    Left = 24
+    Top = 56
+  end
+  object OpenDialog1: TOpenDialog
+    Left = 432
+    Top = 336
+  end
+end
